@@ -1,0 +1,7 @@
+ANCS-2878: Add the border to table in ShopPage
+
+Status:
+    created
+
+Description:
+    Add the border to table in ShopPage.html

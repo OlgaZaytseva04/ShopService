@@ -1,5 +1,8 @@
 ANCS-2877: Create shop service controller
 
+Status:
+    Done
+
 Description:
     Need to create spring MVC controller.
     This controller must return ShopPage.html on request /orders with HTTP-GET method.

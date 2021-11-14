@@ -1,5 +1,8 @@
 ANCS-2876: Add shop page
 
+Status:
+    Done
+
 Description:
     Create page for shop with table and button.
     Button must create a new order.
