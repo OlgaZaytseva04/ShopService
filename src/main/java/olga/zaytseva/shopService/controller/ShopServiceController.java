@@ -11,4 +11,9 @@ public class ShopServiceController {
     public String getShopPage(){
         return "ShopPage";
     }
+
+    @RequestMapping(value = "/orders/product", method = RequestMethod.GET)
+    public String getClientPage(){
+        return "redirect://localhost:8083/orders";
+    }
 }
