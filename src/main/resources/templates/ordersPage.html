@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>OrdersPage</title>
+</head>
+<body>
+
+<table border="4" align="center">
+    <tr>
+        <th align="center">
+            Номер заказа
+        </th>
+        <th align="center">
+            Количество товара
+        </th>
+        <th align="center">
+            Сумма
+        </th>
+        <th align="center">
+            Дата регистрации заказа
+        </th>
+        <th align="center">
+            Статус
+        </th>
+    </tr>
+    <th:block th:each="order : ${orderList}" >
+        <tr>
+            <td align="center" th:text="${order.getId()}">
+            </td>
+            <td align="center" th:text="${order.getCountProduct()}">
+            </td>
+            <td align="center" th:text="${order.getPrice()}">
+            </td>
+            <td align="center" th:text="${order.getDateOfOrdering()}">
+            </td>
+            <td align="center" th:text="${order.getStatus()}">
+            </td>
+            <td>
+                <form th:method="GET" th:action="@{/orders/{id}(id=${order.getId()})}">
+                    <button>Проверить заказ</button>
+                </form>
+            </td>
+            <td>
+                <form th:method="DELETE" th:action="@{/orders/{id}(id=${order.getId()})}">
+                    <button>Отменить заказ</button>
+                </form>
+            </td>
+        </tr>
+    </th:block>
+
+</table>
+
+</body>
+</html>
